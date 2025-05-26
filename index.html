@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Time Webpage</title>
+    <style>
+        body {
+            font: Arial;
+            color: #ffffff;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+    <script>
+        function changeBackgroundColorByTime() {
+            const now = new Date();
+            const hour = now.getHours();
+            let bgColor;
+
+            if (hour >= 6 && hour < 12) {
+                bgColor = "#FFFAE3"; // Morning - Light yellow
+            } else if (hour >= 12 && hour < 18) {
+                bgColor = "#FFE4B5"; // Afternoon - Moccasin
+            } else if (hour >= 18 && hour < 21) {
+                bgColor = "#FFB6C1"; // Evening - Light Pink
+            } else {
+                bgColor = "#2F4F4F"; // Night - Dark Slate Gray
+            }
+
+            document.body.style.backgroundColor = bgColor;
+        }
+
+        window.onload = changeBackgroundColorByTime;
+    </script>
+</head>
+<body>
+    <h1>Assignment 2:Time of Day</h1>
+    <h2>Jakob Midthun</h2>
+    <h3>Course: COP4813 - Web Applications Programming</h3>
+    <h4>Major: Computer Science</h4>
+    <p>Welcome to my dynamic webpage!</p>
+</body>
+</html>
