@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+<!-->This is the formatting for the page, it includes the java programming that changes the background color based
+on the time of day using java's "date" value. It also includes basic formatting for the rest of the text on the page </!-->
 <head>
+    
+<!-->This is the web page's title</!-->
     <meta charset="UTF-8">
     <title>Dynamic Time Webpage</title>
+
+<!-->This is the page's text formatting</!-->
     <style>
         body {
             font: Arial;
@@ -11,6 +18,8 @@
             padding-top: 50px;
         }
     </style>
+
+<!-->This is the java script that changes the page depending on the time of day</!-->
     <script>
         function changeBackgroundColorByTime() {
             const now = new Date();
@@ -20,11 +29,11 @@
             if (hour >= 6 && hour < 12) {
                 bgColor = "#FFFAE3"; // Morning - Light yellow
             } else if (hour >= 12 && hour < 18) {
-                bgColor = "#FFE4B5"; // Afternoon - Moccasin
+                bgColor = "#FF4D00"; // Afternoon - Blood Orange
             } else if (hour >= 18 && hour < 21) {
-                bgColor = "#FFB6C1"; // Evening - Light Pink
+                bgColor = "#4c00b0"; // Evening - Dark Purple
             } else {
-                bgColor = "#2F4F4F"; // Night - Dark Slate Gray
+                bgColor = "#333333"; // Night - Dark Grey
             }
 
             document.body.style.backgroundColor = bgColor;
@@ -33,6 +42,8 @@
         window.onload = changeBackgroundColorByTime;
     </script>
 </head>
+    
+<!-->This is the text body that is displayed on the page, it is formatted with the context at the top of the script</!-->
 <body>
     <h1>Assignment 2:Time of Day</h1>
     <h2>Jakob Midthun</h2>
